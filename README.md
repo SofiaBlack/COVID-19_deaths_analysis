@@ -16,7 +16,7 @@ The following are the scripts that make it up.
 
 Figure 1.1: structure of the model "Analysis of the complete ISTAT data"
 
-![Alt text](/SofiaBlack/Covid-19_deaths_analysis/img/fun-1-eng.png?raw=true)
+![Alt text](/Covid-19_deaths_analysis/img/fun-1-eng.png?raw=true)
 
 Figure 1.2: operation of the module “Analysis of complete ISTAT data"
 
@@ -26,6 +26,7 @@ It processes the dataset released by ISTAT in order to return the related time s
 <br/>
 <b>Input </b>
 - deaths.csv: ISTAT dataset relating to deaths registered from 1 January 2015 to 31 December 2019 in 7.903 municipalities, while from 1 January 2020 to 30 April 2020 in 7.270 Italian municipalities.
+<br/>
 <b>Output</b>
 - deaths_tot.csv: time series of the daily total deaths registered in Italy according to the ISTAT data sets from 1 January 2015 to 30 April 2020.
 
