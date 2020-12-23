@@ -13,7 +13,7 @@ The following are the scripts that make it up.
 
 Figure 1.1: structure of the model "Analysis of the complete ISTAT data"
 
-<img> SofiaBlack.github.com/COVID-19_deaths_analysis/img/fun-1-eng.png
+[My image](SofiaBlack.github.com/COVID-19_deaths_analysis/img/fun-1-eng.png)
 
 
 Figure 1.2: operation of the module “Analysis of complete ISTAT data"
