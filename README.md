@@ -37,7 +37,7 @@ It processes the dataset representing an increase in daily issued by Civil Prote
 
 <b>Input</b>
 - covid19.csv: dataset released by the Italian Civil Protection which shows the daily increase in deaths occurred for COVID-19 nationwide.
-<br/>
+
 <b>Output</b>
 - deaths_covid19.csv: time series of the total number of daily deaths for COVID-19 in Italy from 22 February to 30 April 2020.
 
@@ -47,7 +47,7 @@ It elaborates the time series relative to the daily total deaths and creates a p
 
 <b>Input</b>
 - deaths_tot.csv: time series of the daily total deaths registered in Italy according to the ISTAT data sets.
-<br/>
+
 <b>Output</b>
 - predictions_daily_ARIMA.csv: time series relating to the result of the prediction of daily deaths obtained from the ARIMA predictive model.
 
@@ -55,15 +55,17 @@ It elaborates the time series relative to the daily total deaths and creates a p
 <br/>
 It processes the time series of total daily deaths and confirmed daily deaths for COVID-19. It compares the two time series with the daily prediction obtained from the ARIMA predictive model in order to estimate the possible number of unrecorded COVID-19 deaths in the period from 24 February to 30 April 2020.
 
-Input 
+<b>Input </b>
 - deaths_tot.csv: time series relating to deaths daily totals recorded in Italy according to the ISTAT dataset.
 - Deaths_covid19.csv: time series of the number of daily deaths occurred in Italy from 22 February to 30 April 2020.
 - predictions_daily_ARIMA.csv: time series relating to the result of the prediction of daily deaths obtained from the ARIMA predictive model.
-Output
+
+<b>Output</b>
 - The estimate of the possible total number of COVID-19 deaths predicted by the ARIMA model from February 24 to April 30, 2020 throughout Italy.
 - The estimate of the possible number of deaths due to COVID-19 not registered according to the ARIMA model from 24 February to 30 April 2020 2020 on all Italian soil.
 
-SARIMA monthly model
+<b>SARIMA monthly model</b>
+
 It elaborates the time series of the daily deaths, converts it into a monthly time series and creates a predictive model SARIMA in order to return the prediction of the monthly total deaths obtained from the model for the year 2020.
 
 Input
