@@ -11,8 +11,9 @@ Each module will be described individually below, making known the function it p
 <h3>1.2.1 Analysis of complete ISTAT data</h3>
 The first module: "Analysis of complete ISTAT data" has the purpose of estimating the possible number of COVID-19 deaths not registered for the total number of municipalities present in the official dataset released by ISTAT on 4 June 2020, which includes, from 1 January 2015 to 31 December 2019, the deaths registered in 7.903 Italian municipalities, while, in the first four months of 2020, the deaths registered in 7.270 municipalities. Figure 1.1 shows the structure, while Figure 1.2 shows how the module works. 
 The following are the scripts that make it up.
+<br/>
 
-
+![](img/str-1-eng.png?raw=true)
 
 Figure 1.1: structure of the model "Analysis of the complete ISTAT data"
 
@@ -36,18 +37,22 @@ It processes the dataset representing an increase in daily issued by Civil Prote
 
 <b>Input</b>
 - covid19.csv: dataset released by the Italian Civil Protection which shows the daily increase in deaths occurred for COVID-19 nationwide.
-Output
+<br/>
+<b>Output</b>
 - deaths_covid19.csv: time series of the total number of daily deaths for COVID-19 in Italy from 22 February to 30 April 2020.
 
-ARIMA model
+<b>ARIMA model</b>
+<br/>
 It elaborates the time series relative to the daily total deaths and creates a predictive model ARIMA in order to return the prediction of the daily total deaths obtained from the model for the year 2020.
 
-Input
+<b>Input</b>
 - deaths_tot.csv: time series of the daily total deaths registered in Italy according to the ISTAT data sets.
-Output
+<br/>
+<b>Output</b>
 - predictions_daily_ARIMA.csv: time series relating to the result of the prediction of daily deaths obtained from the ARIMA predictive model.
 
-Comparison of confirmed COVID-19 deaths with ARIMA model prediction
+<b>Comparison of confirmed COVID-19 deaths with ARIMA model prediction</b>
+<br/>
 It processes the time series of total daily deaths and confirmed daily deaths for COVID-19. It compares the two time series with the daily prediction obtained from the ARIMA predictive model in order to estimate the possible number of unrecorded COVID-19 deaths in the period from 24 February to 30 April 2020.
 
 Input 
