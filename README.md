@@ -3,25 +3,25 @@
 The objective of the software is to build a predictive model based on the number of deaths recorded in Italy from 2015 to 2019.
 The prediction of the year 2020 obtained is in turn compared with the number of deaths from COVID-19 confirmed and disseminated by the Italian Civil Protection in order to estimate the possible number of COVID-19 deaths not recorded by official sources.
 1.2 Components
-The software is divided into four modules: ìAnalysis of complete ISTAT dataî, ìData analysis of 7.357 municipalitiesî, ìComplete provinces analysisî and ìRegion analysisî.†
+The software is divided into four modules: ‚ÄúAnalysis of complete ISTAT data‚Äù, ‚ÄúData analysis of 7.357 municipalities‚Äù, ‚ÄúComplete provinces analysis‚Äù and ‚ÄúRegion analysis‚Äù.¬†
 Each module will be described individually below, making known the function it performs through the explanation of each script that composes it.
 1.2.1 Analysis of complete ISTAT data
-The first module: "Analysis of complete ISTAT data" has the purpose of estimating the possible number of COVID-19 deaths not registered for the total number of municipalities present in the official dataset released by ISTAT on 4 June 2020, which includes, from 1 January 2015 to 31 December 2019, the deaths registered in 7.903 Italian municipalities, while, in the first four months of 2020, the deaths registered in 7.270 municipalities. Figure 1.1 shows the structure, while Figure 1.2 shows how the module works.†
+The first module: "Analysis of complete ISTAT data" has the purpose of estimating the possible number of COVID-19 deaths not registered for the total number of municipalities present in the official dataset released by ISTAT on 4 June 2020, which includes, from 1 January 2015 to 31 December 2019, the deaths registered in 7.903 Italian municipalities, while, in the first four months of 2020, the deaths registered in 7.270 municipalities. Figure 1.1 shows the structure, while Figure 1.2 shows how the module works.¬†
 The following are the scripts that make it up.
 
 
 
 Figure 1.1: structure of the model "Analysis of the complete ISTAT data"
 
+<img> SofiaBlack.github.com/COVID-19_deaths_analysis/img/fun-1-eng.png
 
 
-
-Figure 1.2: operation of the module ìAnalysis of complete ISTAT data"
+Figure 1.2: operation of the module ‚ÄúAnalysis of complete ISTAT data"
 
 Creation of time series of daily deaths
 It processes the dataset released by ISTAT in order to return the related time series containing the daily deaths for the same period.
 
-Input†
+Input¬†
 - deaths.csv: ISTAT dataset relating to deaths registered from 1 January 2015 to 31 December 2019 in 7.903 municipalities, while from 1 January 2020 to 30 April 2020 in 7.270 Italian municipalities.
 Output
 - deaths_tot.csv: time series of the daily total deaths registered in Italy according to the ISTAT data sets from 1 January 2015 to 30 April 2020.
@@ -45,7 +45,7 @@ Output
 Comparison of confirmed COVID-19 deaths with ARIMA model prediction
 It processes the time series of total daily deaths and confirmed daily deaths for COVID-19. It compares the two time series with the daily prediction obtained from the ARIMA predictive model in order to estimate the possible number of unrecorded COVID-19 deaths in the period from 24 February to 30 April 2020.
 
-Input†
+Input¬†
 - deaths_tot.csv: time series relating to deaths daily totals recorded in Italy according to the ISTAT dataset.
 - Deaths_covid19.csv: time series of the number of daily deaths occurred in Italy from 22 February to 30 April 2020.
 - predictions_daily_ARIMA.csv: time series relating to the result of the prediction of daily deaths obtained from the ARIMA predictive model.
@@ -76,7 +76,7 @@ Output
 - The estimate of the possible minimum, average and maximum number of the total COVID-19 deaths predicted by the SARIMA model for the months of March and April 2020 throughout Italy.
 - The estimate of the possible minimum, average and maximum number of deaths due to COVID-19 not registered according to the SARIMA model for the months of March and April 2020 throughout Italy.
 1.2.2 Data analysis 7.357 municipalities
-The second module ìData analysis 7.357 municipalitiesî aims to estimate the possible number of deaths due to unregistered COVID-19 relating to 7.357 Italian municipalities out of a national total of 7.903 municipalities. Figure 2.1 shows the structure, while Figure 2.2 shows how the module works.†
+The second module ‚ÄúData analysis 7.357 municipalities‚Äù aims to estimate the possible number of deaths due to unregistered COVID-19 relating to 7.357 Italian municipalities out of a national total of 7.903 municipalities. Figure 2.1 shows the structure, while Figure 2.2 shows how the module works.¬†
 Below are the scripts that make it up.
 
 
@@ -102,7 +102,7 @@ Input
 Output
 - deaths_covid19_30june.csv: time series of the total number of daily deaths due to COVID-19 occurred in Italy from 22 February to 30 June 2020.
 
-ARIMA model†
+ARIMA model¬†
 It processes the time series relating to the total daily deaths of the 7.357 municipalities of Italy in order to create the ARIMA predictive model and return the prediction of total daily deaths for the year 2020.
 
 Input
@@ -110,7 +110,7 @@ Input
 Output
 - predictions_daily_ARIMA_7357comuni: time series relating to the result of the prediction of daily deaths obtained from the ARIMA predictive model for the 7.357 municipalities.
 
-Comparison of confirmed COVID-19 deaths with ARIMA model prediction†
+Comparison of confirmed COVID-19 deaths with ARIMA model prediction¬†
 Processes the time series of total daily deaths of 7.357 municipalities in Italy and confirmed daily deaths for COVID-19 and compares them with the daily prediction obtained from the ARIMA predictive model in order to estimate the possible number of deaths due to COVID-19 not registered by 7.357 municipalities in Italy in the period from 24 February to 30 June 2020.
 
 input
@@ -122,7 +122,7 @@ Output
 - The estimate of the possible total number of COVID-19 deaths predicted by the ARIMA model from 24 February to 30 June 2020 for 7.357 municipalities out of a total of 7.903 Italian municipalities.
 - The estimate of the possible number of deaths due to COVID-19 not registered according to the ARIMA model from 24 February to 30 June 2020 for 7.357 municipalities out of a total of 7.903 Italian municipalities.
 
-SARIMA monthly model†
+SARIMA monthly model¬†
 It elaborates the time series relating to daily deaths of 7.357 municipalities of Italy, converts it into a monthly time series, elaborates it and creates the SARIMA predictive model. The script returns the forecast of the total monthly deaths obtained from the model for the year 2020.
 
 Input
@@ -147,7 +147,7 @@ Output
 
 1.2.3 Data analysis complete provinces
 The third module: "Complete provinces data analysis" has the purpose of estimating the possible number of deaths due to unregistered COVID-19 relating to the provinces for which, in the ISTAT dataset which includes 7.357 municipalities, the total daily deaths of each municipality in the province.
-Figure 3.1 shows the structure, while figure 3.2 shows how the module works.†
+Figure 3.1 shows the structure, while figure 3.2 shows how the module works.¬†
 Below are the scripts that compose it.
 
 
@@ -191,7 +191,7 @@ Input
 - time_series_8provinces.csv: time series relating to the total daily deaths recorded from 1 January 2015 to 30 June 2020 in the municipalities of the complete provinces.
 Output
 - predictions_daily_ARIMA_8provinces.csv: time series relating to the result of the prediction of daily deaths obtained from the ARIMA predictive model for the complete provinces.
-†
+¬†
 Comparison of confirmed COVID-19 deaths with ARIMA model prediction
 It elaborates the time series of total daily deaths and daily deaths for COVID-19 of the complete provinces and compares them with the daily prediction obtained from the ARIMA model in order to estimate the possible number of deaths for COVID-19 not registered in the complete provinces from 22 March to 22 May 2020.
 
@@ -213,7 +213,7 @@ Output
 - predictions_SARIMA_lower.csv: time series relating to the minimum limit of the confidence interval of the prediction of the SARIMA model for the complete provinces.
 - predictions_SARIMA_upper.csv: time series relating to the upper limit of the confidence interval of the SARIMA model prediction for complete provinces.
 
-Monthly comparison of confirmed COVID-19 deaths with SARIMA model prediction†
+Monthly comparison of confirmed COVID-19 deaths with SARIMA model prediction¬†
 It processes the time series of total daily deaths and deaths from COVID-19 of the complete provinces, converts them into monthly time series and compares them with the monthly prediction obtained from the SARIMA model in order to estimate the possible number of unrecorded COVID-19 deaths in the complete provinces in April 2020.
 
 Input
@@ -227,15 +227,15 @@ Output
 - The estimate of the possible minimum, average and maximum number of total COVID-19 deaths predicted by the SARIMA model in April 2020 for the complete provinces.
 - The estimate of the possible minimum, average and maximum number of deaths from COVID-19 not registered according to the SARIMA model in April 2020 for the complete provinces.
 1.2.4 Data analysis by regions
-The fourth and last module: ìAnalysis by regionsî has the purpose of estimating the possible number of deaths from COVID-19 not registered for each Italian region. Figure 4.1 shows the structure, while Figure 4.2 shows how the module works. Below are the scripts that make it up.
+The fourth and last module: ‚ÄúAnalysis by regions‚Äù has the purpose of estimating the possible number of deaths from COVID-19 not registered for each Italian region. Figure 4.1 shows the structure, while Figure 4.2 shows how the module works. Below are the scripts that make it up.
 
 
 
-Figure 4.1: structure of the module†"Data analysis by regions"
+Figure 4.1: structure of the module¬†"Data analysis by regions"
 
 
 
-Figure 4.2: operation of the module ìData analysis by regions"
+Figure 4.2: operation of the module ‚ÄúData analysis by regions"
 
 Creation of regional time series of total deaths
 It processes the dataset relating to the total daily deaths of the 7.357 Italian municipalities in order to return the monthly time series of total deaths for every region of Italy. The reference period runs from January 2015 to June 2020.
@@ -243,7 +243,7 @@ It processes the dataset relating to the total daily deaths of the 7.357 Italian
 Input
 - deaths_istat_7.357municipalities.csv: ISTAT dataset relating to deaths registered from 1 January 2015 to 30 June 2020 in 7.357 municipalities out of a total of 7.903 Italian municipalities.
 Output
-- regions /region_name.csv: time series relating to the number of total monthly deaths recorded in the region from January 2015 to June 2020.††
+- regions /region_name.csv: time series relating to the number of total monthly deaths recorded in the region from January 2015 to June 2020.¬†¬†
 
 Creation of regional time series of confirmed COVID-19 deaths
 It processes the dataset relating to the increase in deaths for COVID-19 issued by the Civil Protection and creates the monthly time series of deaths for each region of Italy. The reference months are: March, April, May and June 2020. Subsequently, the time series of each region is multiplied by the percentage of regional coverage of the municipal data released by ISTAT and returned as output.
@@ -258,7 +258,7 @@ Region name - SARIMA monthly
 It elaborates the time series of the total monthly deaths of the reference region and creates the SARIMA model in order to return the forecast of the total monthly deaths of the region obtained from the model for the year 2020.
 
 Input
-- regions /region_name.csv: time series relating to the number of total monthly deaths recorded in the region from January 2015 to June 2020.††
+- regions /region_name.csv: time series relating to the number of total monthly deaths recorded in the region from January 2015 to June 2020.¬†¬†
 Output
 - predictions_SARIMA_name-region.csv: time series relating to the result of the prediction of monthly deaths obtained from the SARIMA predictive model for the region.
 - predictions_SARIMA_name-region._lower.csv: time series relating to the minimum limit of the confidence interval of the regional prediction of the SARIMA model.
@@ -268,7 +268,7 @@ Region name comparison
 It processes the time series of total monthly deaths and deaths from COVID-19 related to the region under consideration and compares them with the forecast of monthly deaths for the year 2020 obtained from the SARIMA predictive model in order to estimate the possible number of unrecorded COVID-19 deaths in March, April, May and June 2020 in the aforementioned region.
 
 Input
-- regions /region-name.csv: time series relating to the number of total monthly deaths recorded in the region from January 2015 to June 2020.†
+- regions /region-name.csv: time series relating to the number of total monthly deaths recorded in the region from January 2015 to June 2020.¬†
 - weighted regions/region-name.csv: time series relating to the number of deaths due to COVID- 19 recorded in the region in the months of March, April, May and June 2020. The time series has been multiplied by the percentage of completeness of the data relating to the total daily deaths present in the table_copteggio_istat.xlsx.
 - predictions_SARIMA_region-name.csv: time series relating to the result of the prediction of monthly deaths obtained from the SARIMA predictive model for the region.
 - predictions_SARIMA_region-name._lower.csv: time series relating to the minimum limit of the confidence interval of the regional prediction of the SARIMA model.
