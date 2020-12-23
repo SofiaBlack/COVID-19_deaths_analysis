@@ -26,7 +26,7 @@ It processes the dataset released by ISTAT in order to return the related time s
 <br/>
 <b>Input </b>
 - deaths.csv: ISTAT dataset relating to deaths registered from 1 January 2015 to 31 December 2019 in 7.903 municipalities, while from 1 January 2020 to 30 April 2020 in 7.270 Italian municipalities.
-<br/>
+
 <b>Output</b>
 - deaths_tot.csv: time series of the daily total deaths registered in Italy according to the ISTAT data sets from 1 January 2015 to 30 April 2020.
 
@@ -34,7 +34,7 @@ It processes the dataset released by ISTAT in order to return the related time s
 <br/>
 It processes the dataset representing an increase in daily issued by Civil Protection of confirmed deaths due to COVID-19 and returns the time series containing the number of daily deaths due to COVID-19 from 24 February to 30 April 2020.
 
-Input
+<b>Input</b>
 - covid19.csv: dataset released by the Italian Civil Protection which shows the daily increase in deaths occurred for COVID-19 nationwide.
 Output
 - deaths_covid19.csv: time series of the total number of daily deaths for COVID-19 in Italy from 22 February to 30 April 2020.
