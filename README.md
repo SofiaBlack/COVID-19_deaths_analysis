@@ -1,5 +1,6 @@
-1. Software description
-1.1 Objective
+<h1>1. Software description</h1>
+<br />
+<h2>1.1 Objective</h2>
 The objective of the software is to build a predictive model based on the number of deaths recorded in Italy from 2015 to 2019.
 The prediction of the year 2020 obtained is in turn compared with the number of deaths from COVID-19 confirmed and disseminated by the Italian Civil Protection in order to estimate the possible number of COVID-19 deaths not recorded by official sources.
 1.2 Components
