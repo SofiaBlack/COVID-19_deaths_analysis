@@ -16,7 +16,7 @@ The following are the scripts that make it up.
 
 Figure 1.1: structure of the model "Analysis of the complete ISTAT data"
 
-![alt text](https://github.com/SofiaBlack/COVID-19_deaths_analysis/blob/img/fun-1-eng.jpg?raw=true)
+![alt text](https://github.com/SofiaBlack/COVID-19_deaths_analysis/blob/img/fun-1-eng.png?raw=true)
 
 Figure 1.2: operation of the module “Analysis of complete ISTAT data"
 
