@@ -3,10 +3,12 @@
 <h2>1.1 Objective</h2>
 The objective of the software is to build a predictive model based on the number of deaths recorded in Italy from 2015 to 2019.
 The prediction of the year 2020 obtained is in turn compared with the number of deaths from COVID-19 confirmed and disseminated by the Italian Civil Protection in order to estimate the possible number of COVID-19 deaths not recorded by official sources.
-1.2 Components
+<br />
+<h2>1.2 Components</h2>
 The software is divided into four modules: “Analysis of complete ISTAT data”, “Data analysis of 7.357 municipalities”, “Complete provinces analysis” and “Region analysis”. 
 Each module will be described individually below, making known the function it performs through the explanation of each script that composes it.
-1.2.1 Analysis of complete ISTAT data
+<br />
+<h3>1.2.1 Analysis of complete ISTAT data</h3>
 The first module: "Analysis of complete ISTAT data" has the purpose of estimating the possible number of COVID-19 deaths not registered for the total number of municipalities present in the official dataset released by ISTAT on 4 June 2020, which includes, from 1 January 2015 to 31 December 2019, the deaths registered in 7.903 Italian municipalities, while, in the first four months of 2020, the deaths registered in 7.270 municipalities. Figure 1.1 shows the structure, while Figure 1.2 shows how the module works. 
 The following are the scripts that make it up.
 
@@ -18,15 +20,14 @@ Figure 1.1: structure of the model "Analysis of the complete ISTAT data"
 
 Figure 1.2: operation of the module “Analysis of complete ISTAT data"
 
-Creation of time series of daily deaths
+<b>Creation of time series of daily deaths</b>
 It processes the dataset released by ISTAT in order to return the related time series containing the daily deaths for the same period.
-
-Input 
+<b>Input </b>
 - deaths.csv: ISTAT dataset relating to deaths registered from 1 January 2015 to 31 December 2019 in 7.903 municipalities, while from 1 January 2020 to 30 April 2020 in 7.270 Italian municipalities.
-Output
+<b>Output</b>
 - deaths_tot.csv: time series of the daily total deaths registered in Italy according to the ISTAT data sets from 1 January 2015 to 30 April 2020.
 
-Creation of time series COVID-19 confirmed deaths
+<b>Creation of time series COVID-19 confirmed deaths</b>
 It processes the dataset representing an increase in daily issued by Civil Protection of confirmed deaths due to COVID-19 and returns the time series containing the number of daily deaths due to COVID-19 from 24 February to 30 April 2020.
 
 Input
