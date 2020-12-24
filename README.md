@@ -137,7 +137,7 @@ It processes the time series relating to the total daily deaths of the 7.357 mun
 <b>Output</b>
 - predictions_daily_ARIMA_7357comuni: time series relating to the result of the prediction of daily deaths obtained from the ARIMA predictive model for the 7.357 municipalities.
 
-<b> of confirmed COVID-19 deaths with ARIMA model prediction</b>
+<b> Comparison of confirmed COVID-19 deaths with ARIMA model prediction </b>
 <br/>
 Processes the time series of total daily deaths of 7.357 municipalities in Italy and confirmed daily deaths for COVID-19 and compares them with the daily prediction obtained from the ARIMA predictive model in order to estimate the possible number of deaths due to COVID-19 not registered by 7.357 municipalities in Italy in the period from 24 February to 30 June 2020.
 
@@ -235,6 +235,7 @@ It elaborates the time series of daily deaths recorded in the municipalities of 
 <b>Output</b>
 - predictions_daily_ARIMA_8provinces.csv: time series relating to the result of the prediction of daily deaths obtained from the ARIMA predictive model for the complete provinces.
  
+ 
 <b>Comparison of confirmed COVID-19 deaths with ARIMA model prediction</b>
 <br/>
 It elaborates the time series of total daily deaths and daily deaths for COVID-19 of the complete provinces and compares them with the daily prediction obtained from the ARIMA model in order to estimate the possible number of deaths for COVID-19 not registered in the complete provinces from 22 March to 22 May 2020.
