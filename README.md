@@ -58,7 +58,7 @@ It processes the time series of total daily deaths and confirmed daily deaths fo
 
 <b>Input </b>
 - deaths_tot.csv: time series relating to deaths daily totals recorded in Italy according to the ISTAT dataset.
-- Deaths_covid19.csv: time series of the number of daily deaths occurred in Italy from 22 February to 30 April 2020.
+- deaths_covid19.csv: time series of the number of daily deaths occurred in Italy from 22 February to 30 April 2020.
 - predictions_daily_ARIMA.csv: time series relating to the result of the prediction of daily deaths obtained from the ARIMA predictive model.
 
 <b>Output</b>
@@ -70,7 +70,7 @@ It processes the time series of total daily deaths and confirmed daily deaths fo
 It elaborates the time series of the daily deaths, converts it into a monthly time series and creates a predictive model SARIMA in order to return the prediction of the monthly total deaths obtained from the model for the year 2020.
 
 <b>Input</b>
-- decessi_tot.csv: time series relating to the total daily deaths recorded in Italy according to the ISTAT dataset.
+- deaths_tot.csv: time series relating to the total daily deaths recorded in Italy according to the ISTAT dataset.
 
 <b>Output</b>
 - predictions_SARIMA.csv: time series relating to the result of the prediction of monthly deaths obtained from the SARIMA predictive model.
